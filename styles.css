@@ -1,0 +1,216 @@
+body {
+    font-family: "Open Sans", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    align-items: center; /* Center items vertically */
+    justify-content: flex-start; /* Center items horizontally */
+    background-color: #1d2d5b;
+    color: white;
+    padding: 10px 20px;
+    margin: 20px 20px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+    gap: 10px; /* Add spacing between logo and text */
+}
+
+header h1 {
+    font-size: calc(1rem + 1vw);
+    font-weight: 500;
+    text-align: center;
+    margin: 0;
+}
+
+.book-label h2 {
+    text-align: left;;
+    margin: 10px 50px;
+    font-size: calc(2rem + 1vw);
+    font-weight: bold;
+}
+
+main {
+    text-align: center;
+    width: 100%;
+    align-content: center;
+}
+.book-list {
+    display: inline-block;
+    text-align: center;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    margin: 0 auto;
+    width: calc(100% - 40px);
+    max-width: 400px;
+}
+
+.book-item {
+    border: 3px solid #1d2d5b;
+    border-radius: 15px;
+    padding: 15px;
+    
+    
+    text-align: center;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.book-item h3 {
+    font-size: auto;
+    font-weight: 500;
+    margin: 10px;
+    min-height: 200px;
+    max-height: fit-content;
+    align-content: center;
+    font-weight: 700;
+}
+
+.book-item p {
+    margin: 5px 0;
+}
+
+.book-item a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #1d2d5b;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    width: calc(80% - 20px);
+    font-size: calc(2rem + 0.5vw);
+}
+
+.book-item a:hover {
+    background-color: #354f9e;
+}
+
+.book_img {
+    width: 100%;
+    height: auto;
+    border: #1d2d5b solid 2px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-toggle {
+    
+    background-color: #1d2d5b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    width: auto;
+    text-align: center;
+    padding: 10px;
+    height: auto;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin: 0px 10px;
+}
+
+.sidebar-toggle:hover {
+    background-color: #354f9e;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -350px;
+    width: 280px;
+    height: 100%;
+    background-color: #1d2d5b;
+    color: white;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    transition: left 0.3s ease;
+    z-index: 1000;
+    overflow-y: auto; /* Enable vertical scrolling */
+    scrollbar-width: thin; /* For Firefox: thin scrollbar */
+    scrollbar-color: #354f9e #1d2d5b; /* For Firefox: scrollbar colors */
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 30px;
+    padding-top: 60px;
+}
+
+.sidebar ul li {
+    margin: 20px 0;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: calc(1.5rem + 0.5vw);
+    font-weight: 500;
+    padding: 10px 20px;
+}
+
+.sidebar ul li a:hover {
+    background-color: #354f9e;
+    border-radius: 5px;
+}
+
+.sidebar::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background-color: #354f9e; /* Scrollbar thumb color */
+    border-radius: 5px; /* Rounded corners for the scrollbar thumb */
+}
+
+.sidebar::-webkit-scrollbar-track {
+    background-color: #1d2d5b; /* Scrollbar track color */
+}
+
+.close-sidebar {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+.close-sidebar:hover {
+    color: #ccc;
+}
+
+.logo {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%; /* Make the logo circular */
+    object-fit: cover; /* Ensure the image fits within the circle */
+    
+    font-size: calc(1rem + 1vw);
+}
+
+.bottom-header {
+    display: flex;
+    align-items: center; /* Center items vertically */
+    justify-content: flex-start; /* Center items horizontally */
+    background-color: #1d2d5b;
+    color: white;
+    padding: 10px 20px;
+    margin: 20px 20px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+    gap: 10px; /* Add spacing between logo and text */
+}
+
+.bottom-header p {
+    font-size: calc(0.8rem + 0.5vw);
+    margin: 0;
+    text-align: center;
+}

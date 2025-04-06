@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhandislik grafikasi</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="Logo.png" type="image/png">
+</head>
+<body>
+    <header>
+        <button class="sidebar-toggle" onclick="toggleSidebar()">☰</button>
+        <img class="logo" src="Logo.png" alt="Logo">
+        <h1>Muhandislik grafikasi</h1>
+    </header>
+    <aside id="sidebar" class="sidebar">
+        <button class="close-sidebar" onclick="toggleSidebar()">✖</button>
+        <ul>
+            <li><a href="#">Mavzular</a></li>
+        </ul>
+    </aside>
+    <section class="book-label">
+        <h2>Mavzular</h2>
+    </section>
+    <main>
+        <div class="book-list">
+            <div class="book-item">
+                <img class="book_img" src="Books/1.png" alt="Kitob 1">
+                <h3>Sirtlarni xususiy vaziyatdagi tekislik bilan kesishuvi. Ikki sirtning o’zaro kesishish chizig’ini aniqlash. </h3>
+                <a href="Books/1.ppt" download>Yuklab olish</a>
+            </div>
+        </div>
+        <div class="book-list">
+            <div class="book-item">
+                <img class="book_img" src="Books/2.png" alt="Kitob 2">
+                <h3>Birikmalarning turlari. O`zDSt 2.311:97. Rezbalarni chizmada tasvirlash va 
+                    belgilash. Standart birikish detallari.</h3>
+                <a href="Books/2.pdf" download>Yuklab olish</a>
+            </div>
+        </div>
+        <div class="book-list">
+            <div class="book-item">
+                <img class="book_img" src="Books/3.png" alt="Kitob 3">
+                <h3>Yordamchi kesuvchi tekisliklar usuli</h3>
+                <a href="Books/3.pptx" download>Yuklab olish</a>
+            </div>
+        </div>
+            <!-- Qo'shimcha kitoblar qo'shilishi mumkin -->
+        </div>
+    <div class="bottom-header">
+        <p>Dadaboyeva Dilnoza - Muhandislik Grafikasi - TATU</p>
+    </div>
+</body>
+<script>
+    function toggleSidebar() {
+        const sidebar = document.getElementById('sidebar');
+        sidebar.classList.toggle('active');
+    }
+
+    function downloadFile(filePath) {
+        const link = document.createElement('a');
+        link.href = filePath;
+        link.download = filePath.split('/').pop();
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }
+</script>
+</html>
